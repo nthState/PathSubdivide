@@ -18,12 +18,23 @@ public extension Shape {
   
 }
 
-private struct PathSubdivider<S> where S: Shape {
+/// Subdivide a shape
+public struct PathSubdivider<S> where S: Shape {
   
+  /// The shape to subdivide
   let shape: S
+  
+  /**
+   The number of times to subdivide
+   
+    Examples:
+   - 4 sided polygon subdivided 1 time = 4 sided polygon
+   - 4 sided polygon subdivided 2 time = 8 sided polygon
+   - 4 sided polygon subdivided 1 time = 16 sided polygon
+   */
   let times: Int
   
-  init(shape: S, times: Int = 1) {
+  public init(shape: S, times: Int = 1) {
     self.shape = shape
     self.times = times
   }
@@ -105,39 +116,6 @@ private struct PathSubdivider<S> where S: Shape {
     
     return elements
     
-  }
-  
-}
-
-/// A custom shape that is build from a list of subdivided path elements
-struct SubdividedShape: Shape {
-  
-  private let elements: [Path.Element]
-  
-  public init(elements: [Path.Element]) {
-    self.elements = elements
-  }
-  
-  func path(in rect: CGRect) -> Path {
-    var path = Path()
-    
-    for element in elements {
-      switch element {
-        
-      case .move(to: let to):
-        path.move(to: to)
-      case .line(to: let to):
-        path.addLine(to: to)
-      case .quadCurve(to: let to, control: let control):
-        path.addQuadCurve(to: to, control: control)
-      case .curve(to: let to, control1: let control1, control2: let control2):
-        path.addCurve(to: to, control1: control1, control2: control2)
-      case .closeSubpath:
-        path.closeSubpath()
-      }
-    }
-    
-    return path
   }
   
 }

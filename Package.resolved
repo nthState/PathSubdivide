@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PathElements",
+        "repositoryURL": "https://github.com/nthState/PathElements",
+        "state": {
+          "branch": "main",
+          "revision": "eaa8d481f762f468cd1c79d8f0f94ccdac9d2676",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
