@@ -25,14 +25,11 @@ public extension Shape {
 
 ## Overview
 
-Text
-
 ## Topics
 
 ### Group
 
 - <doc:Getting-Started-with-PathSubdivide>
-- <doc:Developer-Diary>
 
 - ``PathSubdivide/PathSubdivider``
 

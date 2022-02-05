@@ -1,8 +1,10 @@
 //
-//  File.swift
-//  
+//  CGPoint+.swift
+//  PathSubdivide
 //
-//  Created by Chris Davis on 09/01/2022.
+//  Copyright © 2022 Chris Davis, https://www.nthState.com
+//
+//  See https://github.com/nthState/PathSubdivide/blob/master/LICENSE for license information.
 //
 
 import CoreGraphics

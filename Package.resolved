@@ -6,7 +6,16 @@
         "repositoryURL": "https://github.com/nthState/PathElements",
         "state": {
           "branch": "main",
-          "revision": "eaa8d481f762f468cd1c79d8f0f94ccdac9d2676",
+          "revision": "78c568444e79acae0b78077ff15165f8740beeec",
+          "version": null
+        }
+      },
+      {
+        "package": "PathWarp",
+        "repositoryURL": "https://github.com/nthState/PathWarp",
+        "state": {
+          "branch": "main",
+          "revision": "c069605c35ce18359c23d44a22302f77b64a4d29",
           "version": null
         }
       }

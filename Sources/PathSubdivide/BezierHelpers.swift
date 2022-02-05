@@ -17,7 +17,7 @@ struct Bezier {
   let control2: CGPoint
 }
 
-class BezierHelpers {
+internal class BezierHelpers {
 
   class func subdivide(bezier: Bezier, at: CGFloat = 0.5) -> (first: Bezier, second: Bezier) {
     

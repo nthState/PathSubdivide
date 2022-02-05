@@ -88,9 +88,13 @@ public struct PathSubdivider<S> where S: Shape {
         
         lastPoint = to
       case .quadCurve(to: let to, control: let control):
-        #warning("TODO: Chris to fill in")
-        elements.append(.quadCurve(to: to, control: control))
-        break
+        let (first, second) = BezierHelpers.subdivide(bezier: Bezier(start: lastPoint, finish: to, control1: control, control2: control))
+        
+        elements.append(.quadCurve(to: first.finish, control: first.control1))
+        elements.append(.quadCurve(to: second.finish, control: second.control1))
+        
+        lastPoint = to
+        
       case .curve(to: let to, control1: let control1, control2: let control2):
         
         let (first, second) = BezierHelpers.subdivide(bezier: Bezier(start: lastPoint, finish: to, control1: control1, control2: control2))
