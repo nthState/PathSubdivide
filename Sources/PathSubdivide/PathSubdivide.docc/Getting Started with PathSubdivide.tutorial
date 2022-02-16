@@ -17,7 +17,7 @@
     
     @Steps {
       @Step {
-        Start of with a simple view, this one displays a Rectangle with a red border
+        Start of with a View, this one displays a Rectangle with a red border
         
         @Code(name: "Rectangle.swift", file: "01_Rectangle.swift") {
           @Image(source: "01_Rectangle.png", alt: "accessible description")
