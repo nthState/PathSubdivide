@@ -22,3 +22,8 @@ public extension Shape {
   
 }
 ```
+
+| Before | After |
+|--------|-------|
+![Before](Sources/PathSubdivide/PathSubdivide.docc/Resources/Images/01_Rectangle.png)|![After](Sources/PathSubdivide/PathSubdivide.docc/Resources/Images/04_Rectangle.png)
+
