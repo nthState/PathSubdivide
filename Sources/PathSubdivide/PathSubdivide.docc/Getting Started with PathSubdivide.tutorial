@@ -42,7 +42,7 @@
       }
       
       @Step {
-        Set the `times` parameters to 2, this means we'll run the algorithm twice, so
+        Set the `times` parameters to 2, this means we'll create twice as many elements, so
         a single element will be broken down into two on the first iteration, and then
         again, leaving us with four line parts on the first element
         
