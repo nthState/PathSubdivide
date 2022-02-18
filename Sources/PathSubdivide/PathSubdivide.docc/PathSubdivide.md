@@ -23,8 +23,6 @@ public extension Shape {
 }
 ```
 
-## Overview
-
 ## Topics
 
 ### Group
