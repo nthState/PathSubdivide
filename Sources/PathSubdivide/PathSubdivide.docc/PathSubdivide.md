@@ -5,6 +5,8 @@ on the shape. This is useful if you warping your shapes
 
 Use like
 
+![After](04_Rectangle.png)
+
 ```
 Rectangle()
   .subdivide(times: 2)
