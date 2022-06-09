@@ -16,6 +16,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
       .package(url: "https://github.com/nthState/PathElements", branch: "main"),
       .package(url: "https://github.com/nthState/PathWarp", branch: "main"),
+      .package(url: "git@github.com:apple/swift-docc-plugin.git", branch: "main")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

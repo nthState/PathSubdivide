@@ -10,7 +10,11 @@
 import SwiftUI
 import PathElements
 
-struct ExampleSwiftUIView {}
+struct ExampleSwiftUIView {
+  
+  @State var isAnimating: Bool = false
+  
+}
 
 extension ExampleSwiftUIView: View {
   
@@ -19,6 +23,7 @@ extension ExampleSwiftUIView: View {
       test0
       test1
       test2
+      controls
     }
   }
   
@@ -31,7 +36,7 @@ extension ExampleSwiftUIView: View {
   
   var test1: some View {
     Rectangle()
-      .subdivide()
+      .subdivide(times: isAnimating ? 1 : 2)
       .elements { index, lastPoint, element in
 
               if case let Path.Element.line(to: point) = element {
@@ -55,7 +60,7 @@ extension ExampleSwiftUIView: View {
   
   var test2: some View {
     Rectangle()
-      .subdivide(times: 2)
+      .subdivide(times: isAnimating ? 2 : 4)
       .elements { index, lastPoint, element in
 
               if case let Path.Element.line(to: point) = element {
@@ -75,6 +80,15 @@ extension ExampleSwiftUIView: View {
             }
       .frame(width: 100, height: 100)
       .background(Color.yellow)
+  }
+  
+  var controls: some View {
+    Button {
+      isAnimating.toggle()
+    } label: {
+      Text("Animate Toggle")
+    }
+
   }
 }
 
